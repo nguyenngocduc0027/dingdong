@@ -63,8 +63,10 @@
                                                 <td>{{ $nhatro->room_in_floor }} phòng</td>
                                                 <td>{{ $nhatro->status }}</td>
                                                 <td>
-                                                    <a class="mr-2 ml-2" href="#" data-toggle="modal"
-                                                        data-target="#exampleModal_detail"><i class="fas fa-eye"></i></a>
+                                                    <button class="mr-2 ml-2 detailsBtn" href="#" data-toggle="modal"
+                                                        data-target=".exampleModal_detail"
+                                                        data-class-id="{{ $nhatro->id }}"><i
+                                                            class="fas fa-eye"></i></button>
                                                     <a class="mr-2 ml-2" href="#" data-toggle="modal"
                                                         data-target="#exampleModal_edit"><i
                                                             class="fas fa-pencil-alt"></i></a>
@@ -83,10 +85,11 @@
                 <!-- end data table  -->
                 <!-- ============================================================== -->
             </div>
-            @include('admin.nhatro.create')
-            @include('admin.nhatro.show')
-            @include('admin.nhatro.edit')
-            @include('admin.nhatro.delete')
+
         </div>
     </div>
+    @include('admin.nhatro.create')
+    @include('admin.nhatro.show')
+    @include('admin.nhatro.edit')
+    @include('admin.nhatro.delete')
 @endsection

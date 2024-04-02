@@ -154,7 +154,7 @@
    ========================================================================== */
 
 body {
-    font-family: "Circular Std Book";
+    font-family: "Reddit Mono", monospace;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -171,7 +171,7 @@ h5,
 h6 {
     color: #3d405c;
     margin: 0px 0px 15px 0px;
-    font-family: "Circular Std Medium";
+    font-family: "Reddit Mono", monospace;
 }
 
 h1 {
@@ -2362,7 +2362,7 @@ Pageheader
     padding: 31px 15px;
     text-align: center;
     left: 10px;
-    font-family: "Circular Std Medium";
+    font-family: "Reddit Mono", monospace;
     color: #fff;
 }
 
@@ -2420,7 +2420,7 @@ Pageheader
     right: 0;
     font-size: 16px;
     color: #3d405c;
-    font-family: "Circular Std Medium";
+    font-family: "Reddit Mono", monospace;
     line-height: 1;
 }
 .product-btn {
@@ -2663,7 +2663,7 @@ input[type="radio"] {
     text-align: center;
     color: #333;
     font-size: 13px;
-    font-family: "Circular Std Medium";
+    font-family: "Reddit Mono", monospace;
 
     line-height: 1.6;
     -webkit-transform: translateX(-100%);
@@ -4578,7 +4578,7 @@ Pills vertical
 .table thead th,
 .table th {
     color: #3d405c;
-    font-family: "Circular Std Medium";
+    font-family: "Reddit Mono", monospace;
 }
 
 .table-bordered {
@@ -4608,7 +4608,7 @@ tr.group,
 tr.group:hover {
     background-color: #5969ff !important;
     color: #fff;
-    font-family: "Circular Std Medium";
+    font-family: "Reddit Mono", monospace;
     font-size: 18px;
 }
 
@@ -5586,7 +5586,7 @@ Vertical Timeline - by CodyHouse.co
     height: 7em;
     font-size: 0.75em;
     line-height: 1.333333em;
-    font-family: Consolas, monospace;
+    font-family: "Reddit Mono", monospace;
     padding: 5px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;

@@ -72,7 +72,11 @@ class AdminController extends Controller
     public function show_nhatro($id)
     {
         $nhatro = Nhatro::find($id);
-        return view('admin.nhatro.show', compact('nhatro'));
+        if (!$nhatro) {
+            return response()->json(['error' => 'Contact not found'], 404);
+        }
+
+        return response()->json($nhatro);
     }
 
     public function delete_nhatro($id)
