@@ -138,21 +138,22 @@
                     <!-- ============================================================== -->
                     <!-- validation form -->
                     <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                         <div class="card" style="margin-bottom: 0px;">
                             <div class="card-body">
+                                <label for="">Images</label>
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-100" src="/assets/images/card-img-1.jpg"
+                                            <img class="d-block w-100" src="/assets/images/product-pic.jpg"
                                                 alt="First slide">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block w-100" src="/assets/images/card-img-2.jpg"
+                                            <img class="d-block w-100" src="/assets/images/product-pic-2.jpg"
                                                 alt="Second slide">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block w-100" src="/assets/images/card-img-3.jpg"
+                                            <img class="d-block w-100" src="/assets/images/product-pic-3.jpg"
                                                 alt="Third slide">
                                         </div>
                                     </div>
@@ -165,6 +166,14 @@
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="sr-only">Next</span> </a>
                                 </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+                        <div class="card" style="margin-bottom: 0px;">
+                            <div class="card-body">
+
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2 ">
                                         <label for="validationCustom01">Name</label>

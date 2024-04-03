@@ -19,8 +19,15 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card" style="margin-bottom: 0px;">
                             <div class="card-body">
-                                <form action="{{ route('delete_nhatro', $nhatro->id) }}" method="post"
-                                    class="needs-validation" novalidate>
+                                <?php
+                                if (empty($nhatro)) {
+                                    $retVal = '';
+                                } else {
+                                    $retVal = route('delete_nhatro', $nhatro->id);
+                                }
+                                
+                                ?>
+                                <form action="{{ $retVal }}" method="post" class="needs-validation" novalidate>
                                     @csrf
                                     @method('DELETE')
                                     <div class="row">

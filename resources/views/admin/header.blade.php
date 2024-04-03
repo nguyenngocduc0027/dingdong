@@ -24,7 +24,7 @@
                                     <a href="#" class="list-group-item list-group-item-action active">
                                         <div class="notification-info">
                                             <div class="notification-list-user-img"><img
-                                                    src="/admin/images/avatar-2.jpg" alt=""
+                                                    src="/assets/images/avatar-2.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
                                                     class="notification-list-user-name">Jeremy
@@ -36,7 +36,7 @@
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="notification-info">
                                             <div class="notification-list-user-img"><img
-                                                    src="/admin/images/avatar-3.jpg" alt=""
+                                                    src="/assets/images/avatar-3.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
                                                     class="notification-list-user-name">John Abraham </span>is
@@ -48,7 +48,7 @@
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="notification-info">
                                             <div class="notification-list-user-img"><img
-                                                    src="/admin/images/avatar-4.jpg" alt=""
+                                                    src="/assets/images/avatar-4.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
                                                     class="notification-list-user-name">Monaan Pechi</span> is
@@ -60,7 +60,7 @@
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <div class="notification-info">
                                             <div class="notification-list-user-img"><img
-                                                    src="/admin/images/avatar-5.jpg" alt=""
+                                                    src="/assets/images/avatar-5.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
                                                     class="notification-list-user-name">Jessica

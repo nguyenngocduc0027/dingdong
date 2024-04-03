@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('acreage');
-            $table->integer('price');
+            $table->bigInteger('price');
             $table->integer('n_floor')->nullable();
             $table->integer('n_room')->nullable();
             $table->integer('room_in_floor')->nullable();
