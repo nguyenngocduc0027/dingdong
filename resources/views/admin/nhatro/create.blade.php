@@ -20,7 +20,7 @@
                         <div class="card" style="margin-bottom: 0px;">
                             <div class="card-body">
                                 <form action="{{ route('add_nhatro') }}" method="post" class="needs-validation"
-                                    novalidate>
+                                    enctype="multipart/form-data" novalidate>
                                     @csrf
                                     <div class="row">
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2 ">
@@ -70,6 +70,13 @@
                                                 <option>Enable</option>
                                                 <option>Disable</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2 ">
+                                            <label for="description">Images</label>
+                                            <input type="file" class="form-control" id="images"
+                                                placeholder="Choose images" name="images[]" multiple></input>
                                         </div>
                                     </div>
                                     <div class="row">

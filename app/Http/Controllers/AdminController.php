@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NhatroImages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Nhatro;
@@ -47,6 +48,16 @@ class AdminController extends Controller
     {
         $data = new Nhatro;
 
+        if ($request->hasFile('images')) {
+            $count = 1;
+            foreach ($request->file('images') as $image) {
+                $name = $request->name . $count++ . '.' . $image->extension();
+                $image->move(public_path() . '/images/nhatro/', $name);
+                $n_data[] = '/images/nhatro/' . $name;
+            }
+        }
+
+        $data->images = json_encode($n_data);
         $data->name = $request->name;
         $data->acreage = $request->acreage;
         $data->price = $request->price;
@@ -54,17 +65,12 @@ class AdminController extends Controller
         $data->n_room = $request->n_room;
         $data->room_in_floor = $request->room_in_floor;
         $data->address = $request->address;
-        $images = $request->images;
-        if ($images) {
-            $path_image = 'images/nhatro';
-            $image_name = '/' . $path_image . '/' . $request->acreage . '-' . $request->name . time() . '.' . $images->getClientOriginalExtension();
-            $request->images->move($path_image, $image_name);
-            $data->images = $image_name;
-        }
         $data->status = $request->status;
         $data->description = $request->description;
 
         $data->save();
+
+
 
         return redirect()->back()->with('Success', 'Upload successfully!');
     }
