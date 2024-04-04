@@ -55,9 +55,10 @@ class AdminController extends Controller
                 $image->move(public_path() . '/images/nhatro/', $name);
                 $n_data[] = '/images/nhatro/' . $name;
             }
+            $data->images = json_encode($n_data);
         }
 
-        $data->images = json_encode($n_data);
+
         $data->name = $request->name;
         $data->acreage = $request->acreage;
         $data->price = $request->price;
