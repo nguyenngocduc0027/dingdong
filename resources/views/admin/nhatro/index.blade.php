@@ -47,6 +47,7 @@
                                             <th>Room</th>
                                             <th>Room in Floor</th>
                                             <th>Status</th>
+                                            <th>Images</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -62,6 +63,7 @@
                                                 <td>{{ $nhatro->n_room }} phòng</td>
                                                 <td>{{ $nhatro->room_in_floor }} phòng</td>
                                                 <td>{{ $nhatro->status }}</td>
+                                                <td>{{ $nhatro->images }}</td>
                                                 <td>
                                                     <button class="mr-2 ml-2 detailsBtn" href="#" data-toggle="modal"
                                                         data-target=".exampleModal_detail"
