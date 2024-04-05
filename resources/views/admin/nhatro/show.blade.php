@@ -133,7 +133,9 @@
                             if (index === 0) {
                                 div.addClass('active');
                             }
-                            var img = $('<img>');
+                            var img = $('<img style="height: 100px">');
+                            img.addClass('d-block');
+                            img.addClass('w-100');
                             img.attr('src', imageSrc);
                             img.attr('alt', 'Slide image');
                             div.append(img);
