@@ -21,18 +21,8 @@
                                 <label for="">Images</label>
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="/assets/images/product-pic.jpg"
-                                                alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="/assets/images/product-pic-2.jpg"
-                                                alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="/assets/images/product-pic-3.jpg"
-                                                alt="Third slide">
-                                        </div>
+                                        {{-- Nơi hiện images --}}
+
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
                                         data-slide="prev">
@@ -90,8 +80,8 @@
                                 <div class="form-row">
                                     <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 mb-2">
                                         <label for="address">Address</label>
-                                        <input type="text" class="form-control" id="address"
-                                            placeholder="Address" name="address" readonly disabled>
+                                        <input type="text" class="form-control" id="address" placeholder="Address"
+                                            name="address" readonly disabled>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                         <label for="status">Status</label>
@@ -106,6 +96,7 @@
                                             readonly disabled></textarea>
                                     </div>
                                 </div>
+                                <div id="image_container"></div>
                                 <div class="modal-footer col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal"
                                         style="color: #000; font-weight: bold;">Close
@@ -128,10 +119,27 @@
             $('.detailsBtn').click(function() {
                 var contactId = $(this).data('class-id');
                 console.log(contactId);
+
                 $.ajax({
                     url: '/nhatro/show/' + contactId,
                     type: 'GET',
                     success: function(data) {
+                        var imagesString = data.images;
+                        var images = JSON.parse(imagesString);
+                        console.log(images);
+                        $('.carousel-item').empty();
+                        images.forEach(function(imageSrc, index) {
+                            var div = $('<div>').addClass('carousel-item');
+                            if (index === 0) {
+                                div.addClass('active');
+                            }
+                            var img = $('<img>');
+                            img.attr('src', imageSrc);
+                            img.attr('alt', 'Slide image');
+                            div.append(img);
+                            $('.carousel-inner').append(div);
+                        });
+
                         $('#classModalLabel').text(data.name);
                         $('#name').val(data.name);
                         $('#acreage').val(data.acreage);

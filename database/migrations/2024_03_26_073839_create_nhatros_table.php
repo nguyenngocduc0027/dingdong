@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('n_room')->nullable();
             $table->integer('room_in_floor')->nullable();
             $table->string('address');
-            $table->string('images')->nullable();
+            $table->json('images')->nullable();
             $table->string('status');
             $table->text('description')->nullable();
             $table->timestamps();
